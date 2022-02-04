@@ -1,0 +1,9 @@
+body {
+    background-color: #272a2e;
+}
+
+.container {
+    display: grid;
+}
+
+/* make cards white */
