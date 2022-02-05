@@ -1,5 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 html {
     min-height: 100vh;
+}
+
+header::before {
+    content: '';
+    background-color: brown;
+    border-radius: 100% 30%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 36px;
+    left: 150px;
+    transform: rotate(30deg);
+    border: 2px solid black;
+}
+
+header::after {
+    content: '';
+    background-color: brown;
+    border-radius: 100% 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 36px;
+    left: 180px;
+    transform: rotate(30deg);
+    border: 2px solid black;
 }
 
 body {
@@ -16,15 +44,44 @@ body {
     padding: 0 1.2em;
 }
 
-.container > div {
-    background: white;
-    /* aspect-ratio: 2; */
+.index-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    padding-top: 25px;
+}
+
+.index-card > h2 {
+    z-index: 2;
+    position: absolute;
+    top: 40px;
+    font-size: 3rem;
+    font-family: 'Permanent Marker', cursive;
+    /* color: #2B6855; */
+}
+
+
+
+.redline{
+    width: 100%;
+    background-color: hsl(0, 100%, 50%, .5);
+    height: 1px;
+    z-index: 1;
+}
+
+.blueline {
+    width: 100%;
+    background-color: hsl(255, 100%, 50%, .2);
+    height: 1px;
+    z-index: 1;
 }
 
 @media (max-width: 792px) {
     .container {
-        width: 80%;
-        margin: auto;
+        grid-auto-rows: 300px;
     }
 }
 
