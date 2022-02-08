@@ -1,33 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Titan+One&display=swap');
 
 html {
     min-height: 100vh;
+}
+
+h1 {
+    color: lightblue;
+    padding-left: 10px;
+    font-family: 'Titan One', cursive;
 }
 
 header::before {
     content: '';
     background-color: brown;
     border-radius: 100% 30%;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     position: absolute;
-    top: 36px;
-    left: 150px;
+    top: 32px;
+    left: 144px;
     transform: rotate(30deg);
     border: 2px solid black;
+    z-index: -1;
 }
 
 header::after {
     content: '';
     background-color: brown;
     border-radius: 100% 50%;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     position: absolute;
-    top: 36px;
-    left: 180px;
+    top: 32px;
+    left: 184px;
     transform: rotate(30deg);
     border: 2px solid black;
+}
+
+h1::before {
+    content: '';
+    background-color: brown;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 30px;
+    left: 210px;
+    transform: rotate(30deg);
+    border: 2px solid black;
+    z-index: 1;
+}
+
+h1::after {
+    content: '';
+    background-color: gray;
+    border-radius: 50%;
+    height: 3px;
+    width: 3px;
+    position: absolute;
+    top: 36px;
+    left: 220px;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+body::before {
+    content: '';
+    background-color: gray;
+    border-radius: 50%;
+    height: 3px;
+    width: 3px;
+    position: absolute;
+    top: 36px;
+    left: 232px;
+    border: 2px solid black;
+    z-index: 2;
 }
 
 body {
@@ -43,6 +90,12 @@ body {
     grid-gap: 1.2em;
     padding: 0 1.2em;
 }
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 
 .index-card {
     position: relative;
@@ -63,13 +116,19 @@ body {
     /* color: #2B6855; */
 }
 
+a:visited {
+    /* color: initial; */
+    text-decoration: none;
+  }
+
 
 
 .redline{
     width: 100%;
-    background-color: hsl(0, 100%, 50%, .5);
+    background-color: hsl(0, 100%, 81%);
     height: 1px;
     z-index: 1;
+    border: 0px;
 }
 
 .blueline {
@@ -77,6 +136,7 @@ body {
     background-color: hsl(255, 100%, 50%, .2);
     height: 1px;
     z-index: 1;
+    border: 0px;
 }
 
 @media (max-width: 792px) {

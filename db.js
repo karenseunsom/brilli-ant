@@ -1,4 +1,4 @@
-var categories = {
+const categories = {
     all: [
         {
             question: 'What is web development?',
