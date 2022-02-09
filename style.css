@@ -53,28 +53,68 @@ h1::before {
 
 h1::after {
     content: '';
-    background-color: gray;
+    background-color: transparent;
     border-radius: 50%;
-    height: 3px;
-    width: 3px;
+    height: 10px;
+    width: 10px;
+    box-shadow: -1px 2px 0 1px white;
     position: absolute;
-    top: 36px;
-    left: 220px;
-    border: 2px solid black;
+    transform: rotate(-34deg);
+    top: 42px;
+    left: 226px;
+    /* border: 2px solid black; */
     z-index: 1;
 }
 
+
 body::before {
     content: '';
-    background-color: gray;
-    border-radius: 50%;
-    height: 3px;
+    background-color: black;
+    height: 20px;
     width: 3px;
     position: absolute;
-    top: 36px;
-    left: 232px;
-    border: 2px solid black;
+    top: 58px;
+    left: 142px;
+    transform: rotate(30deg);
     z-index: 2;
+}
+
+body::after {
+    content: '';
+    background-color: black;
+    height: 16px;
+    width: 3px;
+    position: absolute;
+    top: 58px;
+    left: 200px;
+    /* transform: rotate(30deg); */
+    z-index: 2;
+}
+
+
+
+html::before {
+    content: '';
+    background-color: black;
+    height: 20px;
+    width: 3px;
+    position: absolute;
+    top: 58px;
+    left: 170px;
+    transform: rotate(-30deg);
+    z-index: -1;
+}
+
+html::after {
+    content: '';
+    background-color: black;
+    height: 14px;
+    width: 3px;
+    position: absolute;
+    top: 58px;
+    left: 210px;
+    /* transform: rotate(-30deg); */
+    z-index: -1;
 }
 
 body {
