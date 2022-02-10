@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +8,36 @@
     <title>Results</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+
+<body >
     <header>
-        <header>
-            <h1>Brilli-Ant</h1>
-        </header>    
+        <h1>Brilli-Ant</h1>
     </header>
-        <div class="container">
-            <a class="index-card">
-                <h2  id="topic"></h2>
-                <hr class="redline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-                <hr class="blueline">
-            </a>
+    <div class="results-container">
+        <div  class="card-flip">
+            <div class="flip-card-inner">
+                <div class="index-card flip-card-front">
+                    <h2 id="topic"></h2>
+                    <hr class="redline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                    <hr class="blueline">
+                </div>
+                <div class="flip-card-back">
+                    <p id="answer"></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- <script src="./script.js"></script> -->
     <script src="./db.js"></script>
     <script src="./results.js"></script>
 </body>
+
 </html>

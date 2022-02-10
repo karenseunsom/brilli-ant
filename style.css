@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Permanent+Marker&family=Titan+One&display=swap');
 
 html {
     min-height: 100vh;
@@ -121,6 +121,7 @@ body {
     background-color: #272a2e;
     min-height: 100vh;
     margin: auto;
+    position: relative;
 }
 
 .container {
@@ -130,6 +131,19 @@ body {
     grid-gap: 1.2em;
     padding: 0 1.2em;
 }
+
+.results-container {
+    width: 80%;
+    max-width: 900px;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 
 a {
     text-decoration: inherit;
@@ -178,6 +192,43 @@ a:visited {
     z-index: 1;
     border: 0px;
 }
+
+.card-flip {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 2000px;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2rem;
+    transform: rotateY(180deg);
+    padding-top: 25px;
+  }
 
 @media (max-width: 792px) {
     .container {
