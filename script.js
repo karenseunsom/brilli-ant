@@ -8,5 +8,6 @@ document.addEventListener('click', (event) => {
         clickedCategory.splice(0, 1, event.target.dataset.name)
         clickedCategoryJSON = JSON.stringify(clickedCategory)
         localStorage.setItem('clickedCategory', clickedCategoryJSON)
+
     }
 })

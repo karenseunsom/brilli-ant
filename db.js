@@ -3,6 +3,10 @@ const categories = {
         {
             question: 'What is web development?',
             answer: 'creating, building, and maintaining websites and web applications'
+        },
+        {
+            question: 'How many licks to the center of a tootsie pop?',
+            answer: '1000 supposedly'
         }
     ],
     css: [

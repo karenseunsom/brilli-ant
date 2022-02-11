@@ -121,7 +121,7 @@ body {
     background-color: #272a2e;
     min-height: 100vh;
     margin: auto;
-    position: relative;
+
 }
 
 .container {
@@ -140,6 +140,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
 
 
@@ -158,7 +161,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     background-color: white;
-    padding-top: 25px;
+    padding-top: 26px;
 }
 
 .index-card > h2 {
@@ -227,8 +230,39 @@ a:visited {
     font-family: 'Gochi Hand', cursive;
     font-size: 2rem;
     transform: rotateY(180deg);
-    padding-top: 25px;
+    padding-top: 26px;
   }
+
+#arrow-container {
+    background-color: lightcoral;
+    height: fit-content;
+    position: relative;
+    top: 40px;
+    width: 200px;
+    padding: .5em;
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid pink;
+    position: relative;
+    left: 50%;
+    /* top: 10px; */
+
+}
+
+.arrow-right::before {
+    content: '';
+    background-color: pink;
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    bottom: -18px;
+    right: 60px;
+}
 
 @media (max-width: 792px) {
     .container {
