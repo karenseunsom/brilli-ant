@@ -1,18 +1,20 @@
-let clickedCategoryJSON = localStorage.getItem('clickedCategory');
-let clickedCategory = JSON.parse(clickedCategoryJSON);
+const clickedCategoryJSON = localStorage.getItem('clickedCategory');
+const clickedCategory = JSON.parse(clickedCategoryJSON);
+const stringCategory = clickedCategory.toString();
 
-let clickedNumberJSON = localStorage.getItem('clickedNumber');
-let clickedNumber = JSON.parse(clickedNumberJSON);
+let currentQuestionIndex = 0;
+const shuffledQuestions = categories[stringCategory].sort(() => Math.random() - .5)
 
-let topic = document.getElementById('topic');
-let stringCategory = clickedCategory.toString();
-let answer = document.getElementById('answer');
-let nextButton = document.getElementById('arrow-container')
 
-topic.textContent = categories[stringCategory][0].question
-answer.textContent = categories[stringCategory][0].answer
+const topic = document.getElementById('topic');
+const answer = document.getElementById('answer');
+const nextButton = document.getElementById('arrow-container')
+
+topic.textContent = shuffledQuestions[currentQuestionIndex].question
+answer.textContent = shuffledQuestions[currentQuestionIndex].answer
 
 nextButton.addEventListener('click', () => {
-
-
+    currentQuestionIndex++;
+    topic.textContent = shuffledQuestions[currentQuestionIndex].question
+    answer.textContent = shuffledQuestions[currentQuestionIndex].answer
 })
